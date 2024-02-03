@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+<div class="navbar">
+<image alt="logo" width="170" height="170" class="d-inline-block align-text-top" src="{% static 'images/RA.png' %}"></image>
+    <div class="navtitle"> <h1> RHEMRICOFFEE SHOP </h1> </div>
+    <div class="navbar-links">
+        <a class="navbar-link" href="{% url 'home_page'%}">Home</a>
+        <a class="navbar-link" href="{% url 'about_page'%}">About</a>
+        <a class="navbar-link" href="{% url 'contact_page'%}">Contact</a>
+        <a class="navbar-link" href="{% url 'menu_page'%}">Menu</a>
+        <a class="navbar-link" href="{% url 'create_order'%}">Order</a>
+    </div>
+</div>

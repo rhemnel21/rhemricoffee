@@ -1,0 +1,73 @@
+<!-- in templates/order_delete.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Order</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.wikihow.com/images/thumb/4/4c/Make-Coffee-Stained-Paper-Step-21.jpg/aid79206-v4-1200px-Make-Coffee-Stained-Paper-Step-21.jpg') center/cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #dc3545;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c82333;
+        }
+
+        .cancel-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #6c757d;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Order</h1>
+        <p>Are you sure you want to delete the order for {{ order.name }}?</p>
+        <form method="post" action="{% url 'order_delete' pk=order.pk %}">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+        <a href="{% url 'order_list' %}" class="cancel-link">Cancel</a>
+    </div>
+</body>
+</html>

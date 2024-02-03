@@ -1,0 +1,79 @@
+
+
+<!-- create_order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.wikihow.com/images/thumb/4/4c/Make-Coffee-Stained-Paper-Step-21.jpg/aid79206-v4-1200px-Make-Coffee-Stained-Paper-Step-21.jpg') center/cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #007bff;
+            
+        }
+
+        form {
+            margin-top: 35px;
+
+        }
+
+        label {
+            display: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input, select {
+            width: 150%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 30px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Order</h1>
+        <form method="post" action="{% url 'create_order' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>

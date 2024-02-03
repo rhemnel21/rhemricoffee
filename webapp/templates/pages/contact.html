@@ -1,0 +1,82 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHEMRICOFFEE Contact Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contact-container">
+    <h1>Contact Information</h1>
+
+    <ul class="contact-info">
+        <li>
+            <label>Address:</label>
+            <p>Allegria Bldng, 2nd Floor, Bahayang Pag-asa, Bacoor Cavite</p>
+        </li>
+        <li>
+            <label>Phone:</label>
+            <p>09273501883</p>
+            <P>09237901995</p>
+        </li>
+        <li>
+            <label>Email:</label>
+            <p>rhemriccoffee@gmail.com</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

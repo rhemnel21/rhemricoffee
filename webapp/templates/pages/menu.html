@@ -1,0 +1,111 @@
+
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RHEMRICOFFEE SHOP MENU</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f7f7f7;
+      background: url('https://www.wikihow.com/images/thumb/4/4c/Make-Coffee-Stained-Paper-Step-21.jpg/aid79206-v4-1200px-Make-Coffee-Stained-Paper-Step-21.jpg') center/cover;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkgreen;
+    }
+
+    ol {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      border: 1px solid #ddd;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    
+    }
+
+    h2 {
+      color: darkgreen;
+    }
+
+    p {
+      color: Darkgreen;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>MENU</h1>
+
+  <ol>
+    <li>
+      <a href="{% url 'create_order'%}">
+        <h2>Espresso</h2>
+        <p>A strong, concentrated coffee made by forcing hot water through finely-ground coffee beans.</p>
+        
+      </a>
+    </li>
+
+    <li>
+      <a href="{% url 'create_order'%}">
+        <h2>Cappuccino</h2>
+        <p>Espresso mixed with equal parts of steamed milk and milk foam, creating a creamy and frothy drink.</p>
+        
+      </a>
+    </li>
+
+    <li>
+      <a href="{% url 'create_order'%}">
+        <h2>American Coffee</h2>
+        <p>Drip-brewed coffee made by pouring hot water over ground coffee beans, resulting in a milder flavor.</p>
+        
+      </a>
+    </li>
+
+    <li>
+      <a href="{% url 'create_order'%}">
+        <h2>Latte</h2>
+        <p>Espresso mixed with a larger amount of steamed milk, providing a smoother and creamier taste.</p>
+        
+      </a>
+    </li>
+
+    <li>
+      <a href="{% url 'create_order'%}">
+        <h2>Mocha</h2>
+        <p>Espresso combined with steamed milk and chocolate, offering a rich and indulgent coffee experience.</p>
+        
+      </a>
+    </li>
+  </ol>
+</body>
+
+</html>
+
+
+
+{% endblock %}

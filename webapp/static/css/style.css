@@ -1,0 +1,78 @@
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #50ca1c;
+    color: #fff;
+    padding: 0 50px;
+    
+    
+}
+
+.navtitle h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-link {
+    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+
+.container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    text-align: center;
+}
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 70px;
+    padding-top: 90px;
+    text-align: justify;
+    text-indent: 60px;
+}
+
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+body {
+    background: url('https://www.wikihow.com/images/thumb/4/4c/Make-Coffee-Stained-Paper-Step-21.jpg/aid79206-v4-1200px-Make-Coffee-Stained-Paper-Step-21.jpg') center/cover;
+    background: cover;
+}
+
+
+
+  
+
+
+
+
+        
+    
+

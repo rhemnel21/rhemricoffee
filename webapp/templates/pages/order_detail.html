@@ -1,0 +1,70 @@
+<!-- in templates/order_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Detail</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://static.vecteezy.com/system/resources/previews/007/899/368/original/coffee-stains-on-a-vintage-paper-background-concept-free-vector.jpg') center/cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        .edit-link,
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        .back-link {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Detail</h1>
+        <p><strong>Name:</strong> {{ order.name }}</p>
+        <p><strong>Product:</strong> 
+            {% if order.product %}
+                {{ order.product.item_name }}
+            {% else %}
+                No product set
+            {% endif %}
+        </p>
+        <p><strong>Size:</strong> {{ order.size }}</p>
+        <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <a href="{% url 'order_edit' pk=order.pk %}" class="edit-link">Edit</a>
+        <a href="{% url 'order_list' %}" class="back-link">Back to List</a>
+    </div>
+</body>
+</html>
